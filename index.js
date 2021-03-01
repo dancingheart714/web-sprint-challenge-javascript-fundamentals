@@ -76,11 +76,9 @@ const zooAnimals = [
   */
 
   function lowerCaseNames(zooAnimals){
-    const newArray = [];
-    zooAnimals.map(item => {
-      return newArray.push(item.animal_name.toLowerCase())
-    })
-    return newArray;
+    return zooAnimals.map((item)=>{
+      return item.animal_name.toLowerCase();
+    });
   }
   console.log(lowerCaseNames);
   
@@ -90,13 +88,9 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(zooAnimals){
-    const newArray =  [];
-    zooAnimals.filter(item =>{
-     if (item.population < 5){
-       newArray.push(item)
-     }
-  })
-  return newArray;
+   return zooAnimals.filter((item)=>{
+     return item.population <5;
+   });
 }
   console.log(lowPopulationAnimals);
   
@@ -217,13 +211,12 @@ console.log(cuboid.surfaceArea()); // 130
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
-class CuboidMakerTwo extends CuboidMaker{
-    constructor(cuboidTwo){
-      super(cuboidTwo)
-      this.length = cuboidTwo.length,
-      this.width = cuboidTwo.width,
-      this.height = cuboidTwo.height
-    }
+class CuboidMakerTwo {
+  constructor(object){
+    this.length = object.length;
+    this.width = object.width;
+    this.height = object.height;
+  }
     volume(){
       return this.length * this.width * this.height;
     }
