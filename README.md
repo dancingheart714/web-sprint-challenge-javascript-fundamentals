@@ -26,12 +26,24 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+.forEach iterates through every item in the array without stopping; it doesn't return a new array; return is optional
+
+.map always returns a new array; it doesn't manipulate the original array; it's used for converting data; needs the return keyword
 
 2. Explain the difference between a callback and a higher order function.
+The HOF receives another function as a parameter - it is the receiver whereas a callback is the function passed into the HOF
 
 3. What is closure?
+Making sure that the child function can access the parent function; we should be able to answer the question "where did this come from?"
 
 4. Describe the four rules of the 'this' keyword.
+a.  Window Binding:  when there is nothing in the function to return, it will look to the window, or global, to find the "this"
+
+b.  Implicit Binding: the function is scoped to the block so "this" points to the block and not the window
+
+c.  Explicit Binding:  Use of the .call, .bind and .apply specifies what the "this" keyword is bound to explicitly
+
+d.  New Binding:  
 
 5. Why do we need super() in an extended class?
 

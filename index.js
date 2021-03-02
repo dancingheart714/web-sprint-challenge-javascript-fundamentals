@@ -66,7 +66,7 @@ const zooAnimals = [
     })
     return displayNames;
   }
-  console.log(animalNames);
+ 
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -75,24 +75,22 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(zooAnimals){
-    return zooAnimals.map((item)=>{
-      return item.animal_name.toLowerCase();
-    });
-  }
-  console.log(lowerCaseNames);
+  function lowerCaseNames(animals){
+    return animals.map((item) => item.animal_name.toLowerCase());
+  }  
+  
+ 
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(zooAnimals){
-   return zooAnimals.filter((item)=>{
-     return item.population <5;
-   });
-}
-  console.log(lowPopulationAnimals);
+  function lowPopulationAnimals(animals){
+    return animals.filter((item) => item.population < 5);
+  }
+
+  
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -205,8 +203,8 @@ CuboidMaker.prototype.surfaceArea = function(){
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
@@ -224,6 +222,7 @@ class CuboidMakerTwo {
       return( 2 * (this.length * this.width + this.length * this.height + this.width * this.height)); 
     };
   }
+
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
